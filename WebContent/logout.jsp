@@ -9,8 +9,6 @@
 <body>
 <%
 	System.out.println("출력");
-	System.out.println("출력");
-	System.out.println("체크");
 %>
 </body>
 </html>
