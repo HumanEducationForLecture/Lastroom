@@ -9,6 +9,7 @@
 <body>
 <%
 	System.out.println("출력");
+	System.out.println("출력");
 %>
 </body>
 </html>
