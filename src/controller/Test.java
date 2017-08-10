@@ -27,7 +27,7 @@ public class Test extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("출력");
+		System.out.println("Hi merge Test");
 	}
 
 	/**
