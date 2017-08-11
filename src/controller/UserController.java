@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.UserDao;
+import dao.TUserDao;
 import user.UserDTO;
 
 /**
@@ -46,11 +46,30 @@ public class UserController extends HttpServlet {
 		String nickName = request.getParameter("nickname"); 
 		
 		try {
-			new UserDao().insert(new UserDTO(email,password,nickName));
+			new TUserDao().insert(new UserDTO(email,password,nickName));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * 삭제할 때
+	 */
+	@Override
+	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.doDelete(req, resp);
+	}
+
+	/**
+	 * 수정할때 
+	 */
+	@Override
+	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.doPut(req, resp);
+	}
+	
 
 }

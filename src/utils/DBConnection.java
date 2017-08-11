@@ -10,7 +10,7 @@ public class DBConnection {
 
 	// UERNAME and PASSWORD value change to ur develoment environment 
 	static final String USERNAME = "root";
-	static final String PASSWORD = "siddid";
+	static final String PASSWORD = "apmsetup";
 	
 	
 	

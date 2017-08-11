@@ -1,10 +1,9 @@
 package dao;
 
-import java.sql.SQLException;
+import java.util.List;
 
 public interface Dao<T> {
-	int insert(T dto) throws SQLException;
-	int update(T dto);
-	int delete(T dto);
-
+	
+	List<T> getList();
+	
 }
