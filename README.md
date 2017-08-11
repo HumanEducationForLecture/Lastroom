@@ -1,5 +1,6 @@
 # Lastroom Back-end project.
-
+---
+(Issue traker)[https://github.com/HumanEducationForLecture/Lastroom/issues]
 Developer.
 * 장동진
 * 정용채
