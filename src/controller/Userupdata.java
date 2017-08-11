@@ -36,7 +36,7 @@ public class Userupdata extends HttpServlet {
 		String email=request.getParameter("email");
 		String cemail=request.getParameter("cemail");
 		PreparedStatement st = null;
-		//Àß»ý°å´Ù
+
 		try {
 			st.executeQuery(dbupdate);
 			st.setString(1,email);

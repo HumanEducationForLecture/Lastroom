@@ -8,17 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Test
+ * Servlet implementation class jjh
  */
-@WebServlet("/test")
-public class Test extends HttpServlet {
+@WebServlet("/jjh")
+public class JjhController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
     /**
-     * @see HttpServlet#HttpServlet()
+     * Default constructor. 
      */
-    public Test() {
-        super();
+    public JjhController() {
         // TODO Auto-generated constructor stub
     }
 
@@ -26,8 +25,7 @@ public class Test extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		System.out.println("Hi merge Test");
+		System.out.println("jihye test");
 	}
 
 	/**

@@ -12,9 +12,7 @@ import utils.DBConnection;
  * @author kwongiho
  *
  */
-public class UserDAO implements DAO<UserDTO>{
-	
-	
+public class TUserDao implements TDao<UserDTO>{
 	
 	@SuppressWarnings("finally")
 	@Override
@@ -31,8 +29,6 @@ public class UserDAO implements DAO<UserDTO>{
 			pstmt.setString(2, dto.getPassword());
 			pstmt.setString(3, dto.getNickName());
 			isSuccuess = pstmt.executeUpdate();
-			
-			
 		} catch(Exception exception) {
 			exception.printStackTrace();
 			conn.rollback();
