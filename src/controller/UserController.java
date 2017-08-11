@@ -32,7 +32,9 @@ public class UserController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("UTF-8");
+		
 	}
 
 	/**
@@ -40,7 +42,9 @@ public class UserController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//for test.
+		
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("UTF-8");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String nickName = request.getParameter("nickname"); 
@@ -57,18 +61,41 @@ public class UserController extends HttpServlet {
 	 * 삭제할 때
 	 */
 	@Override
-	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		super.doDelete(req, resp);
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("UTF-8");
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
+		
+		try {
+			new TUserDao().delete(new UserDTO(email,password,null));
+			
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}
+				
 	}
 
 	/**
 	 * 수정할때 
 	 */
 	@Override
-	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		super.doPut(req, resp);
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("UTF-8");
+		
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
+		String nickName = request.getParameter("nickname");
+		
+		try {
+			new TUserDao().update(new UserDTO(email,password,nickName));
+			
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}
 	}
 	
 
