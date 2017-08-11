@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.UserDAO;
+import dao.UserDao;
 import user.UserDTO;
 
 /**
@@ -46,7 +46,7 @@ public class UserController extends HttpServlet {
 		String nickName = request.getParameter("nickname"); 
 		
 		try {
-			new UserDAO().insert(new UserDTO(email,password,nickName));
+			new UserDao().insert(new UserDTO(email,password,nickName));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -12,7 +12,7 @@ import utils.DBConnection;
  * @author kwongiho
  *
  */
-public class UserDAO implements DAO<UserDTO>{
+public class UserDao implements Dao<UserDTO>{
 	
 	
 	
