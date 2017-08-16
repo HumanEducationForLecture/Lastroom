@@ -17,10 +17,6 @@ public class UserDTO implements Serializable, User, Characteristics {
 		this.password = password;
 	}
 
-
-
-
-
 	@Override
 	public String getNickName() {
 		return this.nickName;
