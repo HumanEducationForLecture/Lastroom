@@ -1,8 +1,10 @@
 package dao;
 
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Arrays;
 
 import user.UserDTO;
 import utils.DBConnection;
@@ -18,6 +20,9 @@ public class TUserDao implements TDao<UserDTO>{
 	@Override
 	public int insert(UserDTO dto)  throws SQLException{
 		// TODO Auto-generated method stub
+		PwprivateDao pw=new PwprivateDao();
+		pw.key();
+		BigInteger[] s=pw.privat(pw.input(dto.getPassword()));
 		PreparedStatement pstmt = null;
 		Connection conn = null;
 		int isSuccuess=0;
@@ -26,7 +31,7 @@ public class TUserDao implements TDao<UserDTO>{
 			conn = DBConnection.getInstance().getConn();
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, dto.getEmail());
-			pstmt.setString(2, dto.getPassword());
+			pstmt.setString(2, Arrays.toString(s));
 			pstmt.setString(3, dto.getNickName());
 			isSuccuess = pstmt.executeUpdate();
 		} catch(Exception exception) {

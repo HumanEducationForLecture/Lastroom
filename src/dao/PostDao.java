@@ -21,7 +21,7 @@ public class PostDao implements TDao<PostDTO>{
 			pstmt=conn.prepareStatement(query);
 			pstmt.setString(1, dto.getEmail());
 			pstmt.setString(2, dto.getNickName());
-			pstmt.setString(3, content);
+			pstmt.setString(3, dto.getContent());
 			
 			conn.commit();
 			return writeNo;
