@@ -6,15 +6,17 @@ public class PostDTO implements Serializable, User, Characteristics,Post {
 	private String email;
 	private String nickName;
 	private String content;
+	private String password;
 	public PostDTO() {
 		super();
 	}
 	
-	public PostDTO(String email, String nickName,String content) {
+	public PostDTO(String email, String nickName,String content,String password) {
 		super();
 		this.email = email;
 		this.nickName = nickName;
 		this.content=content;
+		this.password=password;
 	}
 
 	@Override
@@ -37,6 +39,12 @@ public class PostDTO implements Serializable, User, Characteristics,Post {
 	}
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
+	}
+	public String getPassword() {
+		return this.content;
+	}
+	public void setPassword(String password) {
+		this.password= password;
 	}
 
 }

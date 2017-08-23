@@ -30,7 +30,7 @@
 		<div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a href="main.jsp">메인</a></li>
-				<li class="active"><a href="check.jsp">게시판</a></li>
+				<li class="active"><a href="post/postList.jsp">게시판</a></li>
 				<li><a href="inform.jsp">학생정보</a></li>
 				<li><a href="club.jsp">동아리</a></li>
 			</ul>
